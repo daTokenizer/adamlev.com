@@ -103,38 +103,26 @@ a:hover, a:active {
     top: 6px;
 }
 
-/* Client Grid */
-.client-grid {
-    width: 100%;
-    max-width: 800px;
-    margin: 30px auto;
-    text-align: center;
+.btn-3 {
+    background: #346ae6;
+    color: #fff;
+    box-shadow: 0 6px #0b32bd;
+    transition: none;
 }
 
-.client-grid table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    margin: 0 auto;
+.btn-3c {
+    border-radius: 5px;
 }
 
-.client-grid td {
-    padding: 20px;
-    text-align: center;
-    vertical-align: middle;
-    width: 25%;
+.btn-3c:hover {
+    box-shadow: 0 4px #0b32bd;
+    top: 2px;
+    color: #fff;
 }
 
-.client-grid img {
-    max-width: 120px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    transition: all 0.3s ease;
-}
-
-.client-grid img:hover {
-    transform: scale(1.05);
+.btn-3c:active {
+    box-shadow: 0 0 #0b32bd;
+    top: 6px;
 }
 
 /* Testimonials */
@@ -169,20 +157,6 @@ a:hover, a:active {
     max-width: 100%;
 }
 
-/* Media Queries */
-@media screen and (max-width: 992px) {
-    .client-grid table {
-        display: inline-block;
-        width: auto;
-        max-width: 100%;
-    }
-    
-    .client-grid td {
-        width: 33.33%;
-        padding: 15px;
-    }
-}
-
 @media screen and (max-width: 768px) {
     #register {
         margin: 0 auto;
@@ -195,20 +169,6 @@ a:hover, a:active {
     
     .col-85 {
         padding: 0;
-    }
-    
-    .btn {
-        padding: 15px 30px;
-        font-size: 14px;
-        margin: 10px auto;
-        width: auto;
-        display: block;
-        max-width: 80%;
-    }
-    
-    .client-grid td {
-        width: 50%;
-        padding: 15px 10px;
     }
     
     .panel-title {
@@ -246,22 +206,34 @@ a:hover, a:active {
         font-size: 13px;
         max-width: 90%;
     }
-    
-    .client-grid table {
-        width: 100%;
-    }
-    
-    .client-grid tr {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .client-grid td {
-        display: flex;
-        width: 50%;
-        padding: 10px;
-        justify-content: center;
-        align-items: center;
-    }
+}
+
+/* Client Glossary */
+.client-glossary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* Add wrapper to help with centering */
+.client-glossary::after {
+    content: '';
+    grid-column: 1 / -1;
+}
+
+.client-glossary img {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.3s ease;
+    justify-self: center;
+}
+
+.client-glossary img:hover {
+    transform: scale(1.05);
 }
