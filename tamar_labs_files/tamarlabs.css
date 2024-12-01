@@ -1,229 +1,267 @@
-.tamarstyle-container-fadein {
-  display: none;
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.tamarstyle-fontsized {
-  line-height: normal;
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #FFFEFF;
+    word-wrap: break-word;
 }
 
-
-.tamarstyle-link {
-  min-width: 10px;
-  display: inline-block;
-  cursor: pointer;
+/* Links */
+a {
+    color: #888;
+    text-decoration: none;
 }
 
-
-.tamarstyle-image {
-	max-width: 100%;
+a:hover, a:active {
+    color: #333;
 }
 
-/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+/* Layout Components */
+.pad {
+    position: relative;
+    padding: 50px 20px;
+    z-index: 99;
+}
+
+#register {
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+#register .inner {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+}
+
+#register .inner.table {
+    display: table;
+}
+
+#register .inner .table-cell {
+    display: table-cell;
+    vertical-align: top;
+    float: none;
+    width: 100%;
+}
+
+.col-85 {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    float: none;
+}
+
+/* Button Styles */
+.btn {
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 20px 40px;
+    display: inline-block;
+    margin: 15px auto;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    transition: all 0.3s;
+    max-width: 90%;
+    text-align: center;
+}
+
+.btn-2 {
+    background: #f5760e;
+    color: #fff;
+    box-shadow: 0 6px #ab3c3c;
+    transition: none;
+}
+
+.btn-2c {
+    border-radius: 5px;
+}
+
+.btn-2c:hover {
+    box-shadow: 0 4px #ab3c3c;
+    top: 2px;
+    color: #fff;
+}
+
+.btn-2c:active {
+    box-shadow: 0 0 #ab3c3c;
+    top: 6px;
+}
+
+/* Client Grid */
+.client-grid {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.client-grid table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 0 auto;
+}
+
+.client-grid td {
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    width: 25%;
+}
+
+.client-grid img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.client-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Testimonials */
 .panel-title img {
     float: left;
     margin-right: 20px;
     border-radius: 50%;
-    width:80px
+    width: 80px;
 }
 
-
-/* Increase the font-size of a span element */
 .panel-title span {
     font-size: 20px;
     margin-right: 15px;
 }
 
-
-/* Style the container with a rounded border, grey background and some padding and margin */
-.container {
-    border: 2px solid #ccc;
-    background-color: #eee;
-    border-radius: 5px;
-    padding: 16px;
-    margin: 16px 0;
+/* Utility Classes */
+.tamarstyle-container-fadein {
+    display: none;
 }
 
-
-
-/* Clear floats after containers */
-.container::after {
-    content: "";
-    clear: both;
-    display: table;
+.tamarstyle-fontsized {
+    line-height: normal;
 }
 
-/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
-.container img {
-    float: left;
-    margin-right: 20px;
-    border-radius: 50%;
-}
-
-
-/* Increase the font-size of a span element */
-.container span {
-    font-size: 20px;
-    margin-right: 15px;
-}
-
-/* Add media queries for responsiveness. This will center both the text and the image inside the container */
-@media (max-width: 500px) {
-  .container {
-    text-align: center;
-  }
-
-  .container img {
-    margin: auto;
-    float: none;
-    display: block;
-  }
-}
-
-/* CSS for button from codrops*/
-
-/* General button style (reset) */
-.btn {
-	border: none;
-	font-family: inherit;
-	font-size: inherit;
-	color: inherit;
-	background: none;
-	cursor: pointer;
-	padding: 25px 80px;
-	display: inline-block;
-	margin: 15px 30px;
-	text-transform: uppercase;
-	font-size:16px;
-	letter-spacing: 1px;
-	font-weight: 700;
-	outline: none;
-	position: relative;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-.btn:after {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-/* Pseudo elements for icons */
-.btn:before,
-
-/* Button 2 */
-.btn-2 {
-	background: #f5760e;
-	color: #fff;
-	box-shadow: 0 6px #ab3c3c;
-	-webkit-transition: none;
-	-moz-transition: none;
-	transition: none;
-}
-
-/* Button 2c */
-.btn-2c {
-	border-radius: 5px;
-}
-
-.btn-2c:hover {
-	box-shadow: 0 4px #ab3c3c;
-	top: 2px;
-	color: #fff;
-}
-
-.btn-2c:active {
-	box-shadow: 0 0 #ab3c3c;
-	top: 6px;
-}
-
-a {
-	color: #888;
-	text-decoration: none;
-}
-
-a:hover,
-a:active {
-	color: #333;
-}
-
-
-/* client glossary */
-/* 
-Max width before this PARTICULAR table gets nasty
-This query will take effect for any screen smaller than 760px
-and also iPads specifically.
-*/
-@media 
-only screen and (max-width: 500px),
-(min-device-width: 768px) and (max-device-width: 1024px)  {
-
-	/* Force table to not be like tables anymore */
-	table, thead, tbody, th, td, tr { 
-		display: block; 
-	}
-	
-	/* Hide table headers (but not display: none;, for accessibility) */
-	thead tr { 
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-	
-	tr {  }
-	
-	td { 
-		/* Behave  like a "row" */
-		border: none;
-		border-bottom: 1px solid #eee; 
-		position: relative;
-		padding-left: 50%; 
-	}
-	
-	td:before { 
-		/* Now like a table header */
-		position: absolute;
-		/* Top/left values mimic padding */
-		top: 6px;
-		left: 6px;
-		width: 45%; 
-		padding-right: 10px; 
-		white-space: nowrap;
-	}
-}
-
-.client-logo {
-    vertical-align: middle;
-    margin: 15px;
-}
-
-/* Facebook Widget Styles */
-.fb_iframe_widget {
+.tamarstyle-link {
+    min-width: 10px;
     display: inline-block;
-    position: relative;
+    cursor: pointer;
 }
 
-.fb_iframe_widget span {
-    display: inline-block;
-    position: relative;
-    text-align: justify;
-}
-
-.fb_iframe_widget iframe {
-    position: absolute;
-}
-
-.fb_iframe_widget_fluid_desktop,
-.fb_iframe_widget_fluid_desktop span,
-.fb_iframe_widget_fluid_desktop iframe {
+.tamarstyle-image {
     max-width: 100%;
 }
 
-.fb_iframe_widget_fluid_desktop iframe {
-    min-width: 220px;
-    position: relative;
+/* Media Queries */
+@media screen and (max-width: 992px) {
+    .client-grid table {
+        display: inline-block;
+        width: auto;
+        max-width: 100%;
+    }
+    
+    .client-grid td {
+        width: 33.33%;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #register {
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    
+    .pad {
+        padding: 20px 10px;
+    }
+    
+    .col-85 {
+        padding: 0;
+    }
+    
+    .btn {
+        padding: 15px 30px;
+        font-size: 14px;
+        margin: 10px auto;
+        width: auto;
+        display: block;
+        max-width: 80%;
+    }
+    
+    .client-grid td {
+        width: 50%;
+        padding: 15px 10px;
+    }
+    
+    .panel-title {
+        text-align: center;
+    }
+    
+    .panel-title img {
+        float: none;
+        margin: 0 auto 15px;
+        display: block;
+    }
+    
+    .panel-title span {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #sales-copy {
+        font-size: 15px !important;
+    }
+    
+    .tamarstyle-fontsized {
+        font-size: 22px !important;
+    }
+    
+    .top {
+        font-size: 18px !important;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 13px;
+        max-width: 90%;
+    }
+    
+    .client-grid table {
+        width: 100%;
+    }
+    
+    .client-grid tr {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .client-grid td {
+        display: flex;
+        width: 50%;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
 }
