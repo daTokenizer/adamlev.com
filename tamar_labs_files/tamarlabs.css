@@ -79,6 +79,8 @@ a:hover, a:active {
     transition: all 0.3s;
     max-width: 90%;
     text-align: center;
+    white-space: normal;
+    line-height: 1.4;
 }
 
 .btn-2 {
